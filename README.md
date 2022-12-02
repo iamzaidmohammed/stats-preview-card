@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-stats-preview-component-\_7hcpQKYep](https://www.frontendmentor.io/solutions/responsive-stats-preview-component-_7hcpQKYep)
+- Live Site URL: [https://stats-preview-card-rose-mu.vercel.app/](https://stats-preview-card-rose-mu.vercel.app/)
 
 ## My process
 
