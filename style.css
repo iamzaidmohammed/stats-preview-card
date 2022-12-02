@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:wght@400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lexend+Deca:wght@400&display=swap");
+
+:root {
+  --main-background: hsl(233, 47%, 7%);
+  --card-background: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+  --main-heading: hsl(0, 0%, 100%);
+  --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--main-background);
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1024px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: var(--card-background);
+}
+
+.content {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-heading {
+  color: var(--main-heading);
+  font-family: "Lexend Deca";
+  margin-bottom: 30px;
+}
+
+.main-heading > span {
+  color: var(--accent);
+}
+
+.main-paragraph {
+  font-family: "Lexend Deca";
+  color: var(--main-paragraph);
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Inter";
+}
+
+.stat-heading {
+  color: var(--stat-headings);
+}
+
+.stat-paragraph {
+  color: var(--main-paragraph);
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.image {
+  position: relative;
+}
+
+.desktop-image {
+  width: 100%;
+}
+
+.mobile-image {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent);
+  opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 960px) {
+  .card {
+    max-width: 430px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .content {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .overlay {
+    max-height: 355px;
+  }
+
+  .stats {
+    flex-direction: column;
+    row-gap: 40px;
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 430px;
+  }
+
+  .image {
+    width: 100%;
+  }
+
+  .desktop-image {
+    display: none;
+  }
+
+  .mobile-image {
+    width: 100%;
+    display: block;
+  }
+}
